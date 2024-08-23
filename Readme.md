@@ -74,10 +74,6 @@ Suppose you have a template file named `Openhack.pptx` with placeholders like `{
 - **REST API**: Create a REST API that allows programmatic access to the certificate generation functionality.
 - **Styling Options**: Provide an option for users to customize the styling of the replaced text, ensuring it matches the template's format.
 
-## License
-
-This project is licensed under the MIT License.
-
 ## Contact
 
 For any queries or issues, please contact [krishm.km17@gmail.com].
