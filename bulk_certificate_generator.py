@@ -72,9 +72,9 @@ def process_ppt_and_generate_pdfs(template_ppt_path, csv_path, output_dir):
             print(f"Failed to delete PPTX: {output_pptx_path} due to conversion failure.")
 
 # Paths for the template, CSV, and output directory
-template_ppt_path = r'C:\Users\krish\Projects\python test\Openhack.pptx'
-csv_path = r'C:\Users\krish\Projects\python test\data.csv'
-output_dir = r'C:\Users\krish\Projects\python test\output_pdfs'
+template_ppt_path = r'C:\Users\krish\Projects\python test\Astro Quest Certificates.pptx'
+csv_path = r'C:\Users\krish\Projects\python test\Results_evaluation - Participants (5).csv'
+output_dir = r'C:\Users\krish\Projects\python test\output_cert'
 
 # Process and generate the PPTs and PDFs
 process_ppt_and_generate_pdfs(template_ppt_path, csv_path, output_dir)
