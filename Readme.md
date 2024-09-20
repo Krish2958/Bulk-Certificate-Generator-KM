@@ -1,4 +1,4 @@
-### README.md
+### Updated README.md
 
 # Bulk Certificate Generator
 
@@ -10,69 +10,66 @@ This Python-based tool automates the generation of bulk certificates by replacin
 - **PPTX to PDF Conversion**: Converts the modified PPTX files to PDFs.
 - **Automated Workflow**: Processes multiple records from a CSV, generating certificates for each entry and saving them as PDFs.
 - **Error Handling**: Handles file existence checks and errors during PPTX to PDF conversion.
+- **Simple UI**: A user-friendly interface to select the template, CSV file, output directory, and generate certificates with just one click.
 
 ## Prerequisites
 
-- Python 3.x
-- Required Python Libraries:
-  - `pandas`
-  - `python-pptx`
-  - `comtypes`
-- Microsoft PowerPoint installed (for PPTX to PDF conversion using `comtypes`)
-
+- Windows OS (Installer works on Windows systems)
+- Microsoft PowerPoint installed (for PPTX to PDF conversion)
+  
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/bulk-certificate-generator.git
-   cd bulk-certificate-generator
-   ```
+### Download & Install the App
 
-2. Install the required Python libraries:
-   ```bash
-   pip install pandas python-pptx comtypes
-   ```
+1. **Download the Installer**:
+   - Head to the `dist` folder of the project (or the latest release) and download the `BulkCertificateGenerator.exe` file.
+
+2. **Run the Installer**:
+   - Locate the downloaded `.exe` file and double-click it to begin the installation process.
+   - Follow the on-screen instructions to install the Bulk Certificate Generator tool.
 
 ## Usage
 
-1. **Prepare Your Template**: Design your certificate in Microsoft PowerPoint, and add placeholders in the format `{{placeholder_name}}`. For example, use `{{name}}` where you want the recipient's name to appear.
+1. **Open the Application**:
+   - After installation, launch the `Bulk Certificate Generator` from your desktop or start menu.
 
-2. **Prepare Your Data**: Create a CSV file where each column corresponds to a placeholder in your template. For example, the CSV might look like this:
+2. **Select Your Template**:
+   - Use the "Select PPT Template" button to upload your PowerPoint template file with placeholders (e.g., `{{name}}`, `{{course}}`, etc.).
 
-   ```csv
-   name,course,completion_date
-   John Doe,Python Programming,2024-08-01
-   Jane Smith,Web Development,2024-08-02
-   ```
+3. **Select Your Data**:
+   - Click the "Select CSV File" button to choose the CSV file containing the data. The CSV should have columns matching the placeholders in your template (e.g., `name`, `course`, `completion_date`).
 
-3. **Run the Script**: Update the paths for the template PPTX, CSV file, and output directory in the script. Then run the script:
+4. **Choose Output Directory**:
+   - Select the folder where you want to save the generated PDF certificates using the "Select Output Directory" button.
 
-   ```bash
-   python bulk_certificate_generator.py
-   ```
+5. **Generate Certificates**:
+   - Once all the fields are selected, click the "Generate Certificates" button. The app will process the data, replace the placeholders in your template, and generate PDFs for each row in the CSV file.
 
-4. **View the Output**: The generated PDFs will be saved in the specified output directory. The intermediate PPTX files will be deleted after successful conversion to PDFs.
-
-## Code Explanation
-
-- `replace_placeholders(slide, replacements)`: Replaces the placeholders in each slide's text with the corresponding values from the CSV data.
-- `convert_ppt_to_pdf(input_pptx_path, output_pdf_path)`: Converts the generated PPTX file to PDF using Microsoft PowerPoint.
-- `process_ppt_and_generate_pdfs(template_ppt_path, csv_path, output_dir)`: Reads the CSV file, processes each record, generates a new PPTX file with the placeholders replaced, and then converts it to PDF.
+6. **View the Output**:
+   - The generated PDF certificates will be saved in the output directory you specified. Each certificate will be named based on the data from the CSV file (e.g., `JohnDoe_output.pdf`).
 
 ## Example
 
-Suppose you have a template file named `Openhack.pptx` with placeholders like `{{name}}`, `{{course}}`, and `{{completion_date}}`. If you have a `data.csv` file as shown in the "Usage" section, running the script will generate certificates for each person listed in the CSV and save them as PDFs in the output directory.
+Suppose you have a PowerPoint template named `Openhack.pptx` with placeholders like `{{name}}`, `{{course}}`, and `{{completion_date}}`. If you have a CSV file (e.g., `data.csv`) structured like:
+
+```csv
+name,course,completion_date
+John Doe,Python Programming,2024-08-01
+Jane Smith,Web Development,2024-08-02
+```
+
+By selecting this template and CSV in the app, and choosing an output folder, the app will generate a PDF certificate for each entry in the CSV, replacing placeholders like `{{name}}` with "John Doe", `{{course}}` with "Python Programming", etc.
 
 ## Future Goals
 
-### Creating a Web Platform to Automate Bulk Certificate Creation
+### Web Platform Automation
 
-- **Web Interface**: Develop a web-based platform that allows users to upload their PPTX templates and CSV files.
-- **Automation**: The platform will automatically handle the entire process of generating and converting certificates in the cloud, removing the need for local PowerPoint installations.
-- **Cloud Storage Integration**: Implement integration with cloud storage services like Google Drive or Dropbox for saving the generated certificates.
-- **User Authentication**: Add user accounts and sessions so that users can track their generated certificates.
-- **REST API**: Create a REST API that allows programmatic access to the certificate generation functionality.
-- **Styling Options**: Provide an option for users to customize the styling of the replaced text, ensuring it matches the template's format.
+- **Web Interface**: Develop a web-based platform that allows users to upload PPTX templates and CSV files.
+- **Cloud Automation**: Automate the entire certificate generation and conversion process in the cloud, removing the need for local PowerPoint installations.
+- **Cloud Storage**: Integrate cloud storage services like Google Drive or Dropbox for saving certificates.
+- **User Authentication**: Add user authentication and sessions to allow tracking of generated certificates.
+- **API Integration**: Provide a REST API for programmatic access to certificate generation features.
+- **Custom Styling**: Allow users to customize the style of the replaced text, ensuring it matches the template's formatting.
 
 ## Contact
 
@@ -80,3 +77,4 @@ For any queries or issues, please contact [krishm.km17@gmail.com].
 
 ---
 
+This updated README now reflects the steps to download, install, and use the executable version of the Bulk Certificate Generator, providing users with an intuitive interface to generate certificates effortlessly.
