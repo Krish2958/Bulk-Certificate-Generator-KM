@@ -1,5 +1,3 @@
-### Updated README.md
-
 # Bulk Certificate Generator
 
 This Python-based tool automates the generation of bulk certificates by replacing placeholders in a PowerPoint (PPTX) template with data from a CSV file and converting the modified presentations into PDF format.
@@ -74,7 +72,3 @@ By selecting this template and CSV in the app, and choosing an output folder, th
 ## Contact
 
 For any queries or issues, please contact [krishm.km17@gmail.com].
-
----
-
-This updated README now reflects the steps to download, install, and use the executable version of the Bulk Certificate Generator, providing users with an intuitive interface to generate certificates effortlessly.
