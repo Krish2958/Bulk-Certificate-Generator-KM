@@ -1,3 +1,4 @@
 output_pdfs
 build/bulk_certificate_generator
 bulk_certificate_generator.spec
+data
